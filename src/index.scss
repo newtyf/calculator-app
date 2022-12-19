@@ -1,0 +1,126 @@
+html[data-theme="dark"] {
+  // Backgrounds
+  --mainBackground: hsl(222, 26%, 31%);
+  --toggleBackground: hsl(223, 31%, 20%);
+  --keypadBackground: hsl(223, 31%, 20%);
+  --screenBackground: hsl(224, 36%, 15%);
+
+  // Keys
+  --keyFunctionalBackground: hsl(225, 21%, 49%);
+  --keyFunctionalShadow: hsl(224, 28%, 35%);
+  --keyFunctionalHover: hsl(224, 51%, 76%);
+  --keyFunctionalColor: hsl(0, 0%, 100%);
+
+  --keyResultBackground: hsl(6, 63%, 50%);
+  --keyResultShadow: hsl(6, 70%, 34%);
+  --keyResultHover: hsl(6, 93%, 67%);
+  --keyResultColor: hsl(0, 0%, 100%);
+
+  --keyNumberBackground: hsl(30, 25%, 89%);
+  --keyNumberShadow: hsl(28, 16%, 65%);
+  --keyNumberHover: hsl(0, 0%, 100%);
+  --keyNumberColor: hsl(221, 14%, 31%);
+
+  // Text
+  --textMainColor: hsl(0, 0%, 100%);
+}
+html[data-theme="light"] {
+  // Backgrounds
+  --mainBackground: hsl(0, 0%, 90%);
+  --toggleBackground: hsl(0, 5%, 81%);
+  --keypadBackground: hsl(0, 5%, 81%);
+  --screenBackground: hsl(0, 0%, 93%);
+
+  // Keys
+  --keyFunctionalBackground: hsl(185, 42%, 37%);
+  --keyFunctionalShadow: hsl(185, 58%, 25%);
+  --keyFunctionalHover: hsl(185, 41%, 56%);
+  --keyFunctionalColor: hsl(0, 0%, 100%);
+
+  --keyResultBackground: hsl(25, 98%, 40%);
+  --keyResultShadow: hsl(25, 99%, 27%);
+  --keyResultHover: hsl(25, 100%, 61%);
+  --keyResultColor: hsl(0, 0%, 100%);
+
+  --keyNumberBackground: hsl(45, 7%, 89%);
+  --keyNumberShadow: hsl(35, 11%, 61%);
+  --keyNumberHover: hsl(0, 0%, 100%);
+  --keyNumberColor: hsl(221, 14%, 31%);
+
+  // Text
+  --textMainColor: hsl(60, 10%, 19%);
+}
+html[data-theme="neon"] {
+  // Backgrounds
+  --mainBackground: hsl(268, 75%, 9%);
+  --toggleBackground: hsl(268, 71%, 12%);
+  --keypadBackground: hsl(268, 71%, 12%);
+  --screenBackground: hsl(268, 71%, 12%);
+
+  // Keys
+  --keyFunctionalBackground: hsl(281, 89%, 26%);
+  --keyFunctionalShadow: hsl(285, 91%, 52%);
+  --keyFunctionalHover: hsl(280, 56%, 44%);
+  --keyFunctionalColor: hsl(300, 100%, 98%);
+
+  --keyResultBackground: hsl(176, 100%, 44%);
+  --keyResultShadow: hsl(177, 92%, 70%);
+  --keyResultHover: hsl(177, 100%, 79%);
+  --keyResultColor: hsl(60, 10%, 19%);
+
+  --keyNumberBackground: hsl(268, 47%, 21%);
+  --keyNumberShadow: hsl(290, 70%, 36%);
+  --keyNumberHover: hsl(268, 54%, 44%);
+
+  // Text
+  --textMainColor: hsl(52, 100%, 62%);
+}
+
+@mixin mobile {
+  @media (max-width: 400px) {
+    @content;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+body {
+  background-color: var(--mainBackground);
+  font-family: "League Spartan", sans-serif;
+  color: var(--textMainColor);
+  font-weight: 700;
+}
+
+.CalculatorApp {
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  @include mobile {
+    max-height: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+  }
+}

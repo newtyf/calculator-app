@@ -1,0 +1,9 @@
+.Keypad {
+  background-color: var(--keypadBackground);
+  height: 65%;
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+}
